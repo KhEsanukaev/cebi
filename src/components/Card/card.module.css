@@ -1,0 +1,18 @@
+.img_card {
+    width: 700px;
+    height: 450px;
+    margin-left: 300px;
+}
+
+.card {
+    margin: auto;
+    width: 100%;
+    margin-top: 100px;
+}
+
+/* card.module.css */
+:global(.slick-prev),
+:global(.slick-next) {
+    background-color: rgb(143, 146, 134) !important; /* Задаем зеленый фоновый цвет */
+    z-index: 1;
+}

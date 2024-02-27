@@ -1,0 +1,48 @@
+.img {
+    width: 319px;
+    height: 204px;
+}
+
+.card {
+    background-color: #ffffff;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+}
+
+
+  
+  .card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25); 
+  }
+  
+
+.desc {
+    text-align: left;
+    font-weight: 300;
+    margin-left: 10px;
+    color: black;
+}
+
+.name {
+    text-align: left;
+    font-weight: 700;
+    margin-left: 10px;
+    color: rgb(49, 48, 48);
+}
+
+.price {
+    font-family: 'robotobold';
+    font-size: 25px;
+    display: flex;
+    text-decoration: none;
+    margin-bottom: 1px;
+    margin-left: 10px;
+    text-align: left;
+    font-weight: 700;
+    color: rgb(49, 48, 48);
+}
+
+.rub {
+    margin-left: 10px;
+    color: rgb(49, 48, 48);
+}

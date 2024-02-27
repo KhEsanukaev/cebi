@@ -1,0 +1,24 @@
+.categories {
+ 
+  margin-right: 78%;
+}
+
+.all_categories a {
+  font-weight: 500;
+  color: #666774;
+  text-decoration: inherit;
+  padding-inline-end: 66px;
+}
+
+.h2 {
+  font-size: 16px;
+  padding-top: 13px;
+  color: black;
+  margin-right: 156px;
+}
+
+.slider {
+  
+  margin-top: 80px;
+  margin-left: 2px;
+}

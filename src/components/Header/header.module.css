@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    width: 1440px;
+   
+    margin: auto;
+    padding-left: 5%;
+    padding-top: 1%;
+}
+
+.cont_ul {
+  display: flex;
+    justify-content: space-around;
+    width: 55%;
+    list-style: none;
+    font-size: 12px;
+    align-items: center;
+  }
+
+  .cont_ul a {
+    color: black;
+    font-weight: 400;
+  }
+
+.inp {
+  background: 0 0;
+  border-left: 1px solid #ccc;
+  padding: 0.6180469716em;
+  background-color: #f2f2f2;
+  color: #43454b;
+  border: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
+}
+.form {
+    padding-top: 16px;
+}
+.btn1 {
+    background-color:#ffffff;
+    border: none
+    
+}
+
+.head {
+    border-bottom: 2px solid #CCC;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 42px;
+    z-index: 1000;
+    background-color: #FFF;
+}
+
+.call {
+  display: grid;
+    margin-left: 50px;
+    margin-top: 24px;
+    font-family: 'robotobold';
+    font-weight: 500;
+    font-size: 14pt;
+}
+
+.mainLink {
+  color: blue; 
+}
+
+.mainLink:hover {
+  color: #acce11; 
+}
+
+.aboutLink {
+  color: blue; 
+}
+
+.aboutLink:hover {
+  color: #acce11; 
+}
+
+.contactLink {
+  color: blue; 
+}
+
+.contactLink:hover {
+  color: #acce11; 
+}
+
+.uploadLink {
+  color: blue; 
+}
+
+.uploadLink:hover {
+  color: #acce11; 
+}

@@ -1,0 +1,63 @@
+.inp {
+  width: 240px;
+  box-shadow: none;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  border: none; 
+  border-bottom: 1px solid #000; 
+  outline: none; 
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+  height: 87px;
+}
+
+.hh {
+  justify-content: left;
+  display: flex;
+}
+
+.btn {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: right;
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgb(153, 180, 31); /* Цвет фона при наведении */
+  color: white; /* Цвет текста при наведении, если нужно */
+}
+
+.media {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 450px;
+  margin-right: 450px;
+}
+
+.footer {
+  width: 1365px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  margin-inline-end: 242px;
+}
+
+.span {
+  font-size: 12px;
+  margin-right: 80px;
+}
+
+.whatsapp {
+  border-radius: 6px;
+}
+
+.telegram {
+  border-radius: 6px;
+}

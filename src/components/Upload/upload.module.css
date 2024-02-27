@@ -1,0 +1,30 @@
+.upload {
+    text-align: left;
+    display: flex;
+    margin-top: 56px;
+}
+
+.h2_catalog {
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.link a {
+    color: black;
+    font-weight: 300;
+}
+
+.link a:hover {
+    color: #acce11; 
+  }
+
+.link2 a {
+    color: black;
+    font-weight: 300;
+}
+
+.link2 a:hover {
+    color: #acce11; 
+  }
+
+  
