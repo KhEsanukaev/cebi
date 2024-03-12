@@ -35,9 +35,10 @@
 
 .media {
   display: flex;
-  justify-content: space-around;
-  margin-left: 450px;
-  margin-right: 450px;
+  justify-content: space-evenly;
+  width: 30%;
+  margin: auto;
+ 
 }
 
 .footer {

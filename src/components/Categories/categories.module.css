@@ -3,11 +3,16 @@
   margin-right: 78%;
 }
 
+.category a:hover {
+  color: #acce11; /* Изменяет цвет текста на зеленый при наведении на ссылку */
+}
+
+
 .all_categories a {
-  font-weight: 500;
+  font-weight: 400;
   color: #666774;
   text-decoration: inherit;
-  padding-inline-end: 66px;
+  padding-inline-end: 240px;
 }
 
 .h2 {

@@ -1,40 +1,44 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react"; // Добавляем useState
 import { fetchDoorhandles } from "../../features/doorhandlesSlice";
-import { useEffect } from "react";
-import DoorhandlesCard from "../DoorhandlesCard"; 
-import style from '../Doorhandles/doorhandles.module.css'
+import DoorhandlesCard from "../DoorhandlesCard";
+import styles from "../Doorhandles/doorhandles.module.css";
 
-const Doorhandles = () => {
+const Doorhandles = ({searchQuery}) => {
   const dispatch = useDispatch();
   const { id } = useParams();
-
-  const doorhandles = useSelector((state: any) => state.doorhandles.doorhandles); // Получаем doorhandles из Redux
+  // Используем doorhandles напрямую из Redux, без дополнительного состояния
+  const doorhandles = useSelector(
+    (state: any) => state.doorhandles.doorhandles // сделать фильтрацию, если id в парамсе есть фильтруем по ид иначе выводим все как есть
+  );
 
   useEffect(() => {
-    dispatch(fetchDoorhandles() as any);
-  }, []);
-  
+    dispatch(fetchDoorhandles());
+  }, [dispatch]);
 
-  // Дополнительная проверка наличия doorhandles и его являения массивом перед использованием filter
-  const filteredDoorhandles = Array.isArray(doorhandles)
-    ? doorhandles.filter((item) => {
-        if (!id) return true;
-
-        return item.genresId === id;
-      })
-    : [];
-
+  // Фильтрация doorhandles по id и поисковому запросу
+  const filteredDoorhandles = doorhandles.filter((item) => {
+    // Фильтрация по id
+    const matchesId = !id || item.genresId === id;
+    // Фильтрация по поисковому запросу
+    const matchesQuery = item.name
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+    return matchesId && matchesQuery;
+  });
 
   return (
-    <div className={style.doorhandles}>
-      {filteredDoorhandles?.map((item) => (
-        <DoorhandlesCard item={item} key={item._id}/>
-      ))}
-    </div>
+    <>
+      <div className={styles.input}>
+      </div>
+      <div className={styles.doorhandles}>
+        {filteredDoorhandles.map((item) => (
+          <DoorhandlesCard item={item} key={item._id} />
+        ))}
+      </div>
+    </>
   );
 };
 
 export default Doorhandles;
-
-  

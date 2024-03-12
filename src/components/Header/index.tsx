@@ -1,42 +1,25 @@
-import React, { useState, useEffect } from "react";
 import cebilogo from "../../img/cebilogo.jpg";
 import { Link } from "react-router-dom";
-import styles from "../Header/header.module.css";
-import { FaSearch } from "react-icons/fa";
-import DoorhandlesCard from "../DoorhandlesCard";
+import styles from "./header.module.css";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+import { fetchDoorhandles } from "../../features/doorhandlesSlice";
 
+const Header = ({ searchQuery, setSearchQuery }) => {
+  const dispatch = useDispatch();
+  const doorhandles = useSelector((state) => state.doorhandles.doorhandles);
 
-const Header = ({ doorhandles }) => {
+  useEffect(() => {
+    dispatch(fetchDoorhandles());
+  }, [dispatch]);
 
- 
-  
-  // Предполагаем, что doorhandles передаётся как пропс
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredDoorhandles, setFilteredDoorhandles] = useState([])
+  const filteredDoorhandles = doorhandles.filter((item) => {
+    return item.name.toLowerCase().includes(searchQuery.toLowerCase());
+  });
 
-useEffect(() => {
-  setFilteredDoorhandles(doorhandles);
-}, [doorhandles]);
-
-  const handleSearchChange = (e) => {
-    const query = e.target.value;
-    setSearchQuery(query);
-
-    if (!query) {
-      setFilteredDoorhandles(doorhandles); // Если запрос пустой, показываем все товары
-      return;
-    }
-
-    // Фильтрация товаров по названию
-    const filtered = doorhandles.filter((doorhandles) =>
-      doorhandles.name.toLowerCase().includes(query.toLowerCase())
-    );
-    setFilteredDoorhandles(filtered); // Обновляем состояние отфильтрованными товарами
+  const handleChange = (e) => {
+    setSearchQuery(e.target.value);
   };
-  
-
-
-  // Возвращаем JSX вашего компонента...
 
   return (
     <header className={styles.head}>
@@ -69,31 +52,15 @@ useEffect(() => {
             </Link>
           </li>
         </ul>
-
-        <form
-          role="search"
-          method="get"
-          action="/"
-          className={styles.form}
-          onSubmit={(e) => e.preventDefault()}
-        >
-          <button type="submit" className={styles.btn1}>
-            <FaSearch /> <i></i>
-          </button>
+        <div >
           <input
-            type="search"
-            placeholder="Поиск продукции"
-            className={styles.inp}
+            type="text"
             value={searchQuery}
-            onChange={handleSearchChange}
+            onChange={handleChange}
+            placeholder="Поиск продукции..."
+            className={styles.inp}
           />
-
-          <div>
-            {filteredDoorhandles?.map((item) => (
-              <DoorhandlesCard item={item} key={item._id} />
-            ))}
-          </div>
-        </form>
+        </div>
         <div className={styles.call}>
           <span>+79899309981</span>
           <span>goldtrader95@mail.ru</span>

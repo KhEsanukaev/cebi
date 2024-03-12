@@ -1,6 +1,6 @@
 import grozny from "../../img/grozny.jpg";
 import CEBI from "../../img/CEBI.jpg"
-import styles from "../AdoutUs/aboutUs.module.css"
+import styles from "../AboutUs/aboutUs.module.css"
 import empire from "../../img/empire.jpg"
 import security from "../../img/security.jpg"
 
