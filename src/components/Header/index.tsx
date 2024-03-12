@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useState, useEffect } from "react";
 import cebilogo from "../../img/cebilogo.jpg";
 import { Link } from "react-router-dom";
@@ -11,34 +10,33 @@ const Header = ({ doorhandles }) => {
 
  
   
-
+  // Предполагаем, что doorhandles передаётся как пропс
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredDoorhandles, setFilteredDoorhandles] = useState([])
 
-  useEffect(() => {
-    setFilteredDoorhandles(doorhandles);
-  }, [doorhandles]);
+useEffect(() => {
+  setFilteredDoorhandles(doorhandles);
+}, [doorhandles]);
 
   const handleSearchChange = (e) => {
     const query = e.target.value;
     setSearchQuery(query);
-  
+
     if (!query) {
       setFilteredDoorhandles(doorhandles); // Если запрос пустой, показываем все товары
       return;
     }
-  
-    // Добавляем проверку на undefined перед фильтрацией
-      const filtered = doorhandles?.filter(item => item.name.toLowerCase().includes(query.toLowerCase()))
 
-      debugger        
-
-      setFilteredDoorhandles(filtered); // Обновляем состояние отфильтрованными товарами
+    // Фильтрация товаров по названию
+    const filtered = doorhandles.filter((doorhandles) =>
+      doorhandles.name.toLowerCase().includes(query.toLowerCase())
+    );
+    setFilteredDoorhandles(filtered); // Обновляем состояние отфильтрованными товарами
   };
   
 
 
- 
+  // Возвращаем JSX вашего компонента...
 
   return (
     <header className={styles.head}>
