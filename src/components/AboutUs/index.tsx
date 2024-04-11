@@ -3,7 +3,8 @@ import CEBI from "../../img/CEBI.jpg"
 import styles from "../AboutUs/aboutUs.module.css"
 import empire from "../../img/empire.jpg"
 import security from "../../img/security.jpg"
-
+import empiredoorplate from "../../img/empiredoorplate.jpg" 
+import zipline from "../../img/zipline.jpg"
 
 const AboutUs = () => {
   return (
@@ -14,15 +15,23 @@ const AboutUs = () => {
 
 
       <div className={styles.img_about}>
-        <img src={grozny} alt="" width={620} height={500}/>
+        <img src={grozny} alt="" width={650} height={500}/>
       </div>
 
       <div className={styles.empire}>
-        <img src={empire} alt="" width={660} height={700} />
+        <img src={empire} alt="" width={670} height={700} />
       </div>
 
       <div className={styles.secutity}>
-        <img src={security} alt="" width={619} height={570}/>
+        <img src={security} alt="" width={650} height={470}/>
+      </div>
+
+      <div className={styles.empiredoorplate}>
+        <img src={empiredoorplate} alt="" width={650} height={500}/>
+      </div>
+
+      <div className={styles.zipline}>
+        <img src={zipline} alt="" width={660} height={760}/>
       </div>
 
       <div className={styles.text_about}>
@@ -31,7 +40,7 @@ const AboutUs = () => {
         торговыми компаниями: ТК "ТАТАЕВ"; ТЦ "ПРОГРЕСС"; ТД "ДАРИАНО"; "Мир
         Дверей"; "Империя Дверей" и многими другими. Дизайнерские ручки от
         ведущего производителя Турции Çebi design это премиальные ручки по
-        доступной цене. Отправка по всей России. Наш склад находится в городе Грозном.
+        доступной цене. Наш склад находится в городе Грозном.
       </div>
     </div>
   );

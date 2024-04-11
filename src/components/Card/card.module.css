@@ -16,3 +16,46 @@
     background-color: rgb(143, 146, 134) !important; /* Задаем зеленый фоновый цвет */
     z-index: 1;
 }
+
+
+.options {
+    margin-top: 60px;
+}
+
+.product_head {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items:center;
+}
+
+.data {
+    text-align: start;
+}
+
+.data2 {
+    text-align: start;
+}
+
+.head_li {
+    background-color: #d0cfcf8f;
+    list-style-type: none;
+    width: 50%;
+    height: 35px;
+    padding-top: 10px;
+}
+
+.head_li2 {
+    background-color: #d0cfcf8f;
+    list-style-type: none;
+    width: 50%;
+    height: 35px;
+    padding-top: 10px;
+
+}
+
+.activeButton {
+    color: #fff; /* Белый текст */
+    background-color: #cadb47; /* Синий фон */
+  }
+  

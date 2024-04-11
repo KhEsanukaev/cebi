@@ -6,7 +6,7 @@ const DoorhandlesCard = ({ item }) => {
   const dispatch = useDispatch();
 
   return (
-    // Оберните весь возвращаемый JSX в Link, чтобы сделать весь компонент кликабельным
+   
     <Link to={`/card/${item._id}`} className={styles.cardLink}>
       <div className={styles.card}>
         <div>

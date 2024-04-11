@@ -16,7 +16,15 @@ const Footer = () => {
       console.error("Форма не найдена");
       return;
     }
-    emailjs.sendForm('service_exm7jc4', 'template_xwd71oe', form.current, 'cbQQesMDO2TU2XRKx')
+
+    emailjs.sendForm('service_lzsjxdk', 'template_6wqe2rb', form.current, 'cbQQesMDO2TU2XRKx')
+      .then((result) => {
+        console.log(result.text);
+        // Здесь можно добавить уведомление об успешной отправке
+      }, (error) => {
+        console.log(error.text);
+        // Здесь можно обработать ошибку отправки
+      });
   };
   
 
@@ -35,12 +43,8 @@ const Footer = () => {
           <div className={styles.hh}>
             <h2>Написать нам</h2>
           </div>
-          <input
-            type="text"
-            name="email"
-            placeholder="Email"
-            className={styles.inp}
-          />
+         
+          <textarea className={styles.inp} name="message" placeholder="Сообщение" required></textarea>
           <button type="submit" className={styles.btn}>
             Отправить
           </button>
@@ -51,10 +55,11 @@ const Footer = () => {
           <a
             target="_blank"
             href="https://www.instagram.com/cebi_sanoy?igsh=OGQ5ZDc2ODk2ZA=="
+            rel="noopener noreferrer"
           >
             <img src={instagram} alt="" width={50} height={50}></img>
           </a>
-          <a target="_blank" href="https://t.me/+79899309981">
+          <a target="_blank" href="https://t.me/+79899309981" rel="noopener noreferrer">
             <img
               className={styles.telegram}
               src={telegram}
@@ -63,7 +68,7 @@ const Footer = () => {
               height={50}
             ></img>
           </a>
-          <a target="_blank" href="https://wa.me/89899309981">
+          <a target="_blank" href="https://wa.me/89899309981" rel="noopener noreferrer">
             <img
               className={styles.whatsapp}
               src={whatsapp1}
