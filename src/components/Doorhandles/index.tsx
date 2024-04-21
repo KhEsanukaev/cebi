@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { fetchDoorhandles } from "../../features/doorhandlesSlice";
 import DoorhandlesCard from "../DoorhandlesCard";
 import styles from "../Doorhandles/doorhandles.module.css";

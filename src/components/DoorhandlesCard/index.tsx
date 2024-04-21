@@ -1,9 +1,9 @@
-import { useDispatch } from "react-redux";
+
 import styles from '../DoorhandlesCard/doorhandles.module.css'
 import { Link } from "react-router-dom";
 
 const DoorhandlesCard = ({ item }) => {
-  const dispatch = useDispatch();
+  
 
   return (
    

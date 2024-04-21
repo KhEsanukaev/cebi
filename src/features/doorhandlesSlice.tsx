@@ -1,5 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { builders } from "prettier/doc.js";
 
 const initialState = {
   doorhandles: [],
@@ -45,3 +44,4 @@ const doorhandlesSlice = createSlice({
 });
 
 export default doorhandlesSlice.reducer;
+

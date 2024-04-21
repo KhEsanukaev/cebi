@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from "../Contacts/contacts.module.css";
 import cont1 from "../../img/cont1.png";
 import cont2 from "../../img/cont2.png";

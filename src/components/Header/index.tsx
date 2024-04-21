@@ -2,7 +2,7 @@ import cebilogo from "../../img/cebilogo.jpg";
 import { Link } from "react-router-dom";
 import styles from "./header.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { fetchDoorhandles } from "../../features/doorhandlesSlice";
 
 const Header = ({ searchQuery, setSearchQuery }) => {

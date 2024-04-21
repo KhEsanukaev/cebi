@@ -56,11 +56,11 @@ type DoorHandle = {
     <>
       <div className={styles.card}>
         <Slider {...settings}>
-          {doorhandles.image.map((img, index) => (
+          {doorhandles.image.map((index) => (
             <div key={index}>
               <img
                 className={styles.img_card}
-                src={`http://localhost:4000/images/${img}`}
+                src={`http://localhost:4000/images/${index}`}
                 alt="Door Handle"
               />
             </div>
