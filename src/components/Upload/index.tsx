@@ -27,9 +27,7 @@ const Upload = () => {
           </h2>
         </div>
       </div>
-      <div>
         <Contacts showMap={false} />
-      </div>
     </div>
   );
 };
