@@ -20,7 +20,7 @@ const Doorhandles = ({ searchQuery }: any) => {
   // Фильтрация doorhandles по id и поисковому запросу
   const filteredDoorhandles = doorhandles.filter((item: any) => {
     // Фильтрация по id
-    const matchesId = !id || item.genresId === id;
+    const matchesId = !id || item.categoryId._id === id;
     // Фильтрация по поисковому запросу
     const matchesQuery = item.name.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesId && matchesQuery;
