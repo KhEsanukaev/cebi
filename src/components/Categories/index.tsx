@@ -11,7 +11,7 @@ const Categories = () => {
   const dispatch = useDispatch();
 
   const categories = useSelector(
-    (state: RootState) => state.categories.categories
+    (state: any) => state.categories.categories
   );
   useEffect(() => {
     dispatch(fetchCategories());
@@ -28,7 +28,7 @@ const Categories = () => {
         <div className={styles.chapter_h}>
           <h2 className={styles.h2}> Дверные ручки</h2>
           <div className={styles.all_categories}>
-            {categories.map((item) => (
+            {categories.map((item: any) => (
               <div className={styles.category} key={item._id}>
                 <Link to={`/category/${item._id}`}>{item.text}</Link>
               </div>

@@ -6,11 +6,11 @@ const initialState = {
   error: null,
 };
 
-export const fetchCategories = createAsyncThunk(
+export const fetchCategories: any = createAsyncThunk(
   "fetch/categories",
   async (_, thunkAPI) => {
     try {
-      const res = await fetch("http://localhost:4000/categories", {
+      const res = await fetch("http://app.cebisanoy.ru/categories", {
         method: "GET",
       });
 
@@ -36,11 +36,10 @@ const categoriesSlice = createSlice({
       .addCase(fetchCategories.fulfilled, (state, action) => {
         state.categories = action.payload;
       })
-      .addCase(fetchCategories.rejected, (state, action) => {
+      .addCase(fetchCategories.rejected, (state: any, action) => {
         state.error = action.payload;
       })
-      .addCase(fetchCategories.pending, (state, action) => {
-      });
+      
   },
 });
 

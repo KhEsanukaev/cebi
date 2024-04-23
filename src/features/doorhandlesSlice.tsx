@@ -5,9 +5,9 @@ const initialState = {
   error: null,
 };
 
-export const fetchDoorhandles = createAsyncThunk("fetch/Doorhandles", async (_, thunkAPI) => {
+export const fetchDoorhandles: any = createAsyncThunk("fetch/Doorhandles", async (_, thunkAPI) => {
   try {
-    const res = await fetch("http://localhost:4000/doorhandle", {
+    const res = await fetch("http://app.cebisanoy.ru/doorhandle", {
       method: "GET",
     });
    console.log('GET');
@@ -33,13 +33,10 @@ const doorhandlesSlice = createSlice({
       .addCase(fetchDoorhandles.fulfilled, (state, action) => {
         state.doorhandles = action.payload;
       })
-      .addCase(fetchDoorhandles.rejected, (state, action) => {
+      .addCase(fetchDoorhandles.rejected, (state: any, action) => {
         state.error = action.payload;
       })
 
-      .addCase(fetchDoorhandles.pending, (state, action) => {
-        
-      });
   },
 });
 

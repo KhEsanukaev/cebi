@@ -1,8 +1,7 @@
 
 import styles from '../DoorhandlesCard/doorhandles.module.css'
 import { Link } from "react-router-dom";
-
-const DoorhandlesCard = ({ item }) => {
+const DoorhandlesCard = ({ item }: any) => {
   
 
   return (
@@ -10,7 +9,7 @@ const DoorhandlesCard = ({ item }) => {
     <Link to={`/card/${item._id}`} className={styles.cardLink}>
       <div className={styles.card}>
         <div>
-          <img className={styles.img} src={`http://localhost:4000/images/${item?.image[0]}`} alt={item?.name} />
+          <img className={styles.img} src={`http://app.cebisanoy.ru/images/${item?.image[0]}`} alt={item?.name} />
         </div>
         <div>{item?.categoryId?.name}</div>
         <div className={styles.desc}>{item?.description}</div>

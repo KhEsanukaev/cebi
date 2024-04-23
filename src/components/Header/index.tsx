@@ -1,23 +1,23 @@
 import cebilogo from "../../img/cebilogo.jpg";
 import { Link } from "react-router-dom";
 import styles from "./header.module.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useEffect} from "react";
 import { fetchDoorhandles } from "../../features/doorhandlesSlice";
 
-const Header = ({ searchQuery, setSearchQuery }) => {
+const Header = ({ searchQuery, setSearchQuery }: any) => {
   const dispatch = useDispatch();
-  const doorhandles = useSelector((state) => state.doorhandles.doorhandles);
+  // const doorhandles = useSelector((state: any) => state.doorhandles.doorhandles);
 
   useEffect(() => {
     dispatch(fetchDoorhandles());
   }, [dispatch]);
 
-  const filteredDoorhandles = doorhandles.filter((item) => {
-    return item.name.toLowerCase().includes(searchQuery.toLowerCase());
-  });
+  // const filteredDoorhandles = doorhandles.filter((item: any) => {
+  //   return item.name.toLowerCase().includes(searchQuery.toLowerCase());
+  // });
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     setSearchQuery(e.target.value);
   };
 

@@ -5,7 +5,7 @@ import { fetchDoorhandles } from "../../features/doorhandlesSlice";
 import DoorhandlesCard from "../DoorhandlesCard";
 import styles from "../Doorhandles/doorhandles.module.css";
 
-const Doorhandles = ({ searchQuery }) => {
+const Doorhandles = ({ searchQuery }: any) => {
   const dispatch = useDispatch();
   const { id } = useParams();
 
@@ -18,7 +18,7 @@ const Doorhandles = ({ searchQuery }) => {
   }, [dispatch]);
 
   // Фильтрация doorhandles по id и поисковому запросу
-  const filteredDoorhandles = doorhandles.filter((item) => {
+  const filteredDoorhandles = doorhandles.filter((item: any) => {
     // Фильтрация по id
     const matchesId = !id || item.genresId === id;
     // Фильтрация по поисковому запросу
@@ -30,7 +30,7 @@ const Doorhandles = ({ searchQuery }) => {
     <>
       <div className={styles.input}></div>
       <div className={styles.doorhandles}>
-        {filteredDoorhandles.map((item) => (
+        {filteredDoorhandles.map((item: any) => (
           <DoorhandlesCard item={item} key={item._id} />
         ))}
       </div>

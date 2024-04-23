@@ -10,7 +10,7 @@ import photo3 from "../../img/photo3.jpg";
 import photo4 from "../../img/photo4.jpg";
 
 // Компоненты для кастомных стрелок
-function NextArrow(props) {
+function NextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -21,7 +21,7 @@ function NextArrow(props) {
   );
 }
 
-function PrevArrow(props) {
+function PrevArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div

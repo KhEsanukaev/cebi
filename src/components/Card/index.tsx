@@ -34,6 +34,7 @@ type DoorHandle = {
 
   useEffect(() => {
     if (!doorhandles) {
+
       dispatch(fetchDoorhandles());
     }
   }, [dispatch, doorhandles]);
@@ -60,7 +61,7 @@ type DoorHandle = {
             <div key={index}>
               <img
                 className={styles.img_card}
-                src={`http://localhost:4000/images/${index}`}
+                src={`http://app.cebisanoy.ru/images/${index}`}
                 alt="Door Handle"
               />
             </div>
