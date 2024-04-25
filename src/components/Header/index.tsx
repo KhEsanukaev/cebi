@@ -1,23 +1,23 @@
-import cebilogo from "../../img/cebilogo.jpg";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import styles from "./header.module.css";
 import { useDispatch } from "react-redux";
-import { useEffect} from "react";
 import { fetchDoorhandles } from "../../features/doorhandlesSlice";
+import cebilogo from "../../img/cebilogo.jpg";
+import styles from "./header.module.css";
 
-const Header = ({ searchQuery, setSearchQuery }: any) => {
+interface HeaderProps {
+  searchQuery: string;
+  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const Header: React.FC<HeaderProps> = ({ searchQuery, setSearchQuery }) => {
   const dispatch = useDispatch();
-  // const doorhandles = useSelector((state: any) => state.doorhandles.doorhandles);
 
   useEffect(() => {
     dispatch(fetchDoorhandles());
   }, [dispatch]);
 
-  // const filteredDoorhandles = doorhandles.filter((item: any) => {
-  //   return item.name.toLowerCase().includes(searchQuery.toLowerCase());
-  // });
-
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
   };
 
@@ -52,7 +52,7 @@ const Header = ({ searchQuery, setSearchQuery }: any) => {
             </Link>
           </li>
         </ul>
-        <div >
+        <div>
           <input
             type="text"
             value={searchQuery}

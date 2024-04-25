@@ -1,11 +1,24 @@
-
+import React from "react";
 import styles from '../DoorhandlesCard/doorhandles.module.css'
 import { Link } from "react-router-dom";
-const DoorhandlesCard = ({ item }: any) => {
-  
 
+interface DoorhandleItem {
+  _id: string;
+  name: string;
+  image: string[];
+  description: string;
+  price: number;
+  categoryId: {
+    name: string;
+  };
+}
+
+interface Props {
+  item: DoorhandleItem;
+}
+
+const DoorhandlesCard: React.FC<Props> = ({ item }: Props) => {
   return (
-   
     <Link to={`/card/${item._id}`} className={styles.cardLink}>
       <div className={styles.card}>
         <div>

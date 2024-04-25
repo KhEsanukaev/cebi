@@ -1,19 +1,19 @@
+import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import cebilogo from "../../img/cebilogo.jpg";
 import telegram from "../../img/telegtam.png";
 import whatsapp1 from "../../img/whatsapp1.png";
 import instagram from "../../img/instagram.png";
 import styles from "../Footer/footer.module.css";
-import { useRef } from "react";
 
-const Footer = () => {
-  const form = useRef<any>();
+const Footer: React.FC = () => {
+  const form = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e: any) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (!form.current) {
-      console.error("Форма не найдена");
+      console.error("Form not found");
       return;
     }
 
@@ -27,11 +27,11 @@ const Footer = () => {
       .then(
         (result) => {
           console.log(result.text);
-          // Здесь можно добавить уведомление об успешной отправке
+          // Here you can add a success notification
         },
         (error) => {
           console.log(error.text);
-          // Здесь можно обработать ошибку отправки
+          // Here you can handle the sending error
         }
       );
   };

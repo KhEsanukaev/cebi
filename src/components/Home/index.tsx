@@ -1,12 +1,12 @@
+import React from "react";
+import Doorhandles from "../Doorhandles";
 
-import  Doorhandles  from '../Doorhandles';
-
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <>
       <Doorhandles/>
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

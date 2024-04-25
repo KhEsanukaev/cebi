@@ -1,16 +1,16 @@
-
-import Slider from 'react-slick';
+import React from "react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
-// Импорт изображений
 import photo1 from "../../img/photo1.jpg";
 import photo2 from "../../img/photo2.jpg";
 import photo3 from "../../img/photo3.jpg";
 import photo4 from "../../img/photo4.jpg";
+import styles from "./slider.module.css";
 
-// Компоненты для кастомных стрелок
-function NextArrow(props: any) {
+interface PhotoSliderProps {}
+
+function NextArrow(props: React.HTMLProps<HTMLDivElement>) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -21,7 +21,7 @@ function NextArrow(props: any) {
   );
 }
 
-function PrevArrow(props: any) {
+function PrevArrow(props: React.HTMLProps<HTMLDivElement>) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -32,7 +32,7 @@ function PrevArrow(props: any) {
   );
 }
 
-const PhotoSlider = () => {
+const PhotoSlider: React.FC<PhotoSliderProps> = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -51,12 +51,15 @@ const PhotoSlider = () => {
     <Slider {...settings}>
       {photos.map((photo, index) => (
         <div key={index}>
-          <img src={photo} alt={`Slide ${index + 1}`} style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }} />
+          <img
+            src={photo}
+            alt={`Slide ${index + 1}`}
+            className={styles.sliderImage}
+          />
         </div>
       ))}
     </Slider>
   );
-}
+};
 
 export default PhotoSlider;
-

@@ -1,8 +1,9 @@
-import cebilogo from "../../img/cebilogo.jpg";
-import styles from "../Upload/upload.module.css";
-import Contacts from "../Contacts";
+import React from 'react';
+import cebilogo from '../../img/cebilogo.jpg';
+import styles from '../Upload/upload.module.css';
+import Contacts from '../Contacts';
 
-const Upload = () => {
+const Upload: React.FC = () => {
   return (
     <div className={styles.upload}>
       <div>
@@ -27,7 +28,7 @@ const Upload = () => {
           </h2>
         </div>
       </div>
-        <Contacts showMap={false} />
+      <Contacts showMap={false} />
     </div>
   );
 };

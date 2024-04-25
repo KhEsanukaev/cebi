@@ -1,21 +1,21 @@
+import React from "react";
+import styles from "../AboutUs/aboutUs.module.css";
+import CEBI from "../../img/CEBI.jpg";
 import grozny from "../../img/grozny.jpg";
-import CEBI from "../../img/CEBI.jpg"
-import styles from "../AboutUs/aboutUs.module.css"
-import empire from "../../img/empire.jpg"
-import security from "../../img/security.jpg"
-import empiredoorplate from "../../img/empiredoorplate.jpg" 
-import zipline from "../../img/zipline.jpg"
+import empire from "../../img/empire.jpg";
+import security from "../../img/security.jpg";
+import empiredoorplate from "../../img/empiredoorplate.jpg";
+import zipline from "../../img/zipline.jpg";
 
-const AboutUs = () => {
+const AboutUs: React.FC = () => {
   return (
     <div>
       <div className={styles.cebi}>
         <img src={CEBI} alt="" />
       </div>
 
-
       <div className={styles.img_about}>
-        <img src={grozny} alt="" width={650} height={500}/>
+        <img src={grozny} alt="" width={650} height={500} />
       </div>
 
       <div className={styles.empire}>
@@ -23,15 +23,15 @@ const AboutUs = () => {
       </div>
 
       <div className={styles.secutity}>
-        <img src={security} alt="" width={650} height={470}/>
+        <img src={security} alt="" width={650} height={470} />
       </div>
 
       <div className={styles.empiredoorplate}>
-        <img src={empiredoorplate} alt="" width={650} height={500}/>
+        <img src={empiredoorplate} alt="" width={650} height={500} />
       </div>
 
       <div className={styles.zipline}>
-        <img src={zipline} alt="" width={660} height={760}/>
+        <img src={zipline} alt="" width={660} height={760} />
       </div>
 
       <div className={styles.text_about}>

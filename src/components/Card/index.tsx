@@ -8,33 +8,29 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../Card/card.module.css";
 
-type DoorHandle = {
-    _id: string;
-    image: string[];
-    // Добавьте другие необходимые свойства
+interface DoorHandle {
+  _id: string;
+  image: string[];
+  
+}
+
+interface RootState {
+  doorhandles: {
+    doorhandles: DoorHandle[];
   };
-  
-  // Предполагаем, что RootState это интерфейс, хранящий структуру всего стейта приложения
-  interface RootState {
-    doorhandles: {
-      doorhandles: DoorHandle[];
-    };
-  }
+}
 
+const Card: React.FC = () => {
+  const dispatch = useDispatch();
+  const { id } = useParams<{ id: string }>();  // Указываем тип параметра
+  const [activeSection, setActiveSection] = useState<string>("features");
 
-  const Card = () => {
-    const dispatch = useDispatch();
-    const { id } = useParams<{ id: string }>();  // Указываем тип параметра
-    const [activeSection, setActiveSection] = useState<string>("features");
-  
-    const doorhandles = useSelector((state: RootState) =>
-      state.doorhandles.doorhandles.find((item) => item._id === id)
-    );
-  
+  const doorhandles = useSelector((state: RootState) =>
+    state.doorhandles.doorhandles.find((item) => item._id === id)
+  );
 
   useEffect(() => {
     if (!doorhandles) {
-
       dispatch(fetchDoorhandles());
     }
   }, [dispatch, doorhandles]);

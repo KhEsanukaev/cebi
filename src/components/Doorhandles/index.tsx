@@ -1,17 +1,21 @@
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { useEffect} from "react";
 import { fetchDoorhandles } from "../../features/doorhandlesSlice";
 import DoorhandlesCard from "../DoorhandlesCard";
 import styles from "../Doorhandles/doorhandles.module.css";
+import { RootState } from "../../app/store";
 
-const Doorhandles = ({ searchQuery }: any) => {
+
+interface Props {
+  searchQuery?: string;
+}
+
+const Doorhandles: React.FC<Props> = ({ searchQuery }: Props) => {
   const dispatch = useDispatch();
-  const { id } = useParams();
+  const { id } = useParams<{ id?: string }>();
 
-  const doorhandles = useSelector(
-    (state: any) => state.doorhandles.doorhandles // сделать фильтрацию, если id в парамсе есть фильтруем по ид иначе выводим все как есть
-  );
+  const doorhandles = useSelector((state: RootState) => state.doorhandles.doorhandles);
 
   useEffect(() => {
     dispatch(fetchDoorhandles());
@@ -22,7 +26,7 @@ const Doorhandles = ({ searchQuery }: any) => {
     // Фильтрация по id
     const matchesId = !id || item.categoryId._id === id;
     // Фильтрация по поисковому запросу
-    const matchesQuery = item.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesQuery = item.name.toLowerCase().includes(searchQuery?.toLowerCase() || "");
     return matchesId && matchesQuery;
   });
 
