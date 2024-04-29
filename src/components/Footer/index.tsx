@@ -43,10 +43,10 @@ const Footer: React.FC = () => {
           <div className={styles.logo}>
             <img src={cebilogo} alt="" width={100} height={100} />
           </div>
-          Чеченская Республика г.Грозный ул.Аральская
-          <span className={styles.span}></span>
+          
+          <span className={styles.span}>Чеченская Республика г.Грозный ул.Аральская</span>
         </div>
-        <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail} className={styles.form}>
           <div className={styles.hh}>
             <h2>Написать нам</h2>
           </div>

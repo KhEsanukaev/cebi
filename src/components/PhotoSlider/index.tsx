@@ -15,7 +15,12 @@ function NextArrow(props: React.HTMLProps<HTMLDivElement>) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "blue", borderRadius: "50%" }}
+      style={{
+        ...style,
+      
+        background: "blue",
+        borderRadius: "50%",
+      }}
       onClick={onClick}
     />
   );
@@ -26,7 +31,12 @@ function PrevArrow(props: React.HTMLProps<HTMLDivElement>) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "green", borderRadius: "50%" }}
+      style={{
+        ...style,
+        
+        background: "green",
+        borderRadius: "50%",
+      }}
       onClick={onClick}
     />
   );
@@ -39,8 +49,7 @@ const PhotoSlider: React.FC<PhotoSliderProps> = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
+    
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
@@ -48,17 +57,19 @@ const PhotoSlider: React.FC<PhotoSliderProps> = () => {
   const photos = [photo1, photo2, photo3, photo4];
 
   return (
-    <Slider {...settings}>
-      {photos.map((photo, index) => (
-        <div key={index}>
-          <img
-            src={photo}
-            alt={`Slide ${index + 1}`}
-            className={styles.sliderImage}
-          />
-        </div>
-      ))}
-    </Slider>
+    <div className={styles.sliderContainer}>
+      <Slider {...settings}>
+        {photos.map((photo, index) => (
+          <div key={index}>
+            <img
+              src={photo}
+              alt={`Slide ${index + 1}`}
+              className={styles.sliderImage}
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 

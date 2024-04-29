@@ -7,18 +7,42 @@
     max-width: 1280px;
 }
 
-/* Стили для контейнера изображения */
 .image_box {
-    overflow: hidden; /* Обрезает изображение, выходящее за границы контейнера */
+    overflow: hidden; 
   }
   
-  /* Стили для самого изображения */
+
   .image_last {
-    transition: transform 0.5s ease; /* Плавное изменение за 0.5 секунд */
+    transition: transform 0.5s ease; 
   }
   
-  /* Стили для изображения при наведении */
+ 
   .image_box:hover .image_last {
-    transform: scale(1.2); /* Увеличивает размер изображения в 1.2 раза */
+    transform: scale(1.2); 
   }
   
+
+  .image_box {
+    display: flex;
+    /* justify-content: center; */
+  }
+  
+  .image_last {
+    max-width: 100%; 
+  }
+
+  @media screen and (max-width: 768px) {
+    .image_last {
+      max-width: 50%;
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .image_last {
+      max-width: 26%; 
+      display: flex;
+      justify-content: flex-start;
+    }
+  }

@@ -9,3 +9,28 @@
   height: 100%;
   object-fit: cover; 
 }
+
+.sliderContainer {
+    width: 100%;
+  }
+  
+  .sliderImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Styles for iPad */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .sliderContainer {
+      max-width: 55%; /* Adjust as needed */
+ 
+    }
+  }
+  
+  /* Styles for iPhone */
+  @media only screen and (max-device-width: 480px) {
+    .sliderContainer {
+      max-width: 30%; /* Adjust as needed */
+     
+    }
+  }

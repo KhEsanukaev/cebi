@@ -47,12 +47,12 @@
 }
 
 .logo {
-  margin-inline-end: 242px;
+  margin-inline-end: 320px;
 }
 
 .span {
   font-size: 12px;
-  margin-right: 80px;
+  margin-right: 160px;
 }
 
 .whatsapp {
@@ -61,4 +61,106 @@
 
 .telegram {
   border-radius: 6px;
+}
+
+/* Базовые стили для больших экранов уже определены, добавляем адаптации для меньших */
+
+/* Стили для планшетов */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
+  .container {
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  .logo img {
+    width: 80px;
+    height: 80px;
+  }
+  .media img {
+    width: 40px;
+    height: 40px;
+  }
+  .hh, .inp, .btn {
+    width: 100%;
+  }
+}
+
+/* Стили для смартфонов */
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px;
+  }
+  .container {
+    flex-direction: column;
+    align-items:flex-start;
+  }
+  .logo img {
+    width: 60px;
+    height: 60px;
+  }
+  .media img {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: flex-start;
+    width: 30px;
+    height: 30px;
+  }
+  .hh, .inp, .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1280px) {
+  .media {
+    
+    margin: 5px 100px;
+    justify-content: flex-start;
+    padding-top: 10px;
+    
+  }
+}
+
+/* footer.module.css */
+@media (max-width: 1280px) {
+  .form {
+    padding-top: 20px;
+  }
+}
+
+/* Основные стили для кнопки и текста */
+.footer .btn {
+  padding: 10px 20px;
+  font-size: 16px; /* Базовый размер шрифта для кнопки */
+}
+
+.footer .inp {
+  font-size: 14px; /* Базовый размер шрифта для текстового поля */
+}
+
+/* Адаптация для экранов шириной до 768px */
+@media (max-width: 768px) {
+  .footer .btn {
+    padding: 8px 16px;
+    font-size: 14px; /* Уменьшенный размер шрифта для кнопки */
+  }
+
+  .footer .inp {
+    font-size: 12px; /* Уменьшенный размер шрифта для текстового поля */
+  }
+}
+
+/* Адаптация для экранов шириной до 480px */
+@media (max-width: 480px) {
+  .footer .btn {
+    width: 86px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 12px; /* Ещё более уменьшенный размер шрифта для кнопки */
+  }
+
+  .footer .inp {
+    font-size: 10px; /* Ещё более уменьшенный размер шрифта для текстового поля */
+  }
 }

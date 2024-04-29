@@ -1,9 +1,8 @@
 .container {
   display: flex;
   width: 1440px;
-
   margin: auto;
-  padding-left: 5%;
+  padding-left: 0; /* Изменено значение на 0 */
   padding-top: 1%;
 }
 
@@ -89,3 +88,72 @@
 .uploadLink:hover {
   color: #acce11;
 }
+
+
+@media (max-width: 834px) {
+  .container {
+    padding: 10px; /* Примерное настроенное значение для меньших экранов */
+    width: 700px;
+    display: flex;
+    justify-content: flex-start;
+    
+  }
+
+
+
+  
+  .cont_ul {
+    /* Adjust styles for list container on smaller screens */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 10%;
+    height: 80px;
+    font-size: 8px;
+  }
+
+  .inp {
+   
+    width: 80%;
+    margin-bottom: 10px;
+    margin-left: 1px;
+  }
+
+  .call {
+ 
+    text-align: center;
+    margin-left: 1px;
+    width: 190px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .inp {
+  
+    width: 30%;
+  }
+
+  .call {
+    width: 30%;
+    font-size: 0.8rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .cont_ul {
+    display: none; /* Hide the unordered list on mobile */
+  }
+
+}
+
+
+
+@media (max-width: 1440px) {
+  .container {
+    margin: 0; /* Remove margin for smaller screens */
+  }
+}
+

@@ -32,7 +32,7 @@ const Doorhandles: React.FC<Props> = ({ searchQuery }: Props) => {
 
   return (
     <>
-      <div className={styles.input}></div>
+      
       <div className={styles.doorhandles}>
         {filteredDoorhandles.map((item: any) => (
           <DoorhandlesCard item={item} key={item._id} />
