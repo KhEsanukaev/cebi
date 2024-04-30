@@ -10,7 +10,7 @@ export const fetchCategories: any = createAsyncThunk(
   "fetch/categories",
   async (_, thunkAPI) => {
     try {
-      const res = await fetch("https://app.cebisanoy.ru/categories", {
+      const res = await fetch("http://app.cebisanoy.ru/categories", {
         method: "GET",
       });
 
