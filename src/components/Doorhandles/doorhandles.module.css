@@ -12,35 +12,11 @@
   width: calc(100% - 20px); /* Adjusted width for smaller screens */
 }
 
-/* Стили для контейнера с карточками doorhandles на экране шириной 1200px и выше */
-@media (min-width: 1281px) {
+@media (min-width: 430px) {
   .doorhandles {
-    width: 1280px; /* Изменил ширину контейнера под 1200px и выше */
-    margin-right: 50px; /* Изменил отступ справа */
-  }
-}
-
-/* Стили для контейнера с карточками doorhandles на экране шириной от 900px до 1199px */
-@media (min-width: 900px) and (max-width: 1199px) {
-  .doorhandles {
-    width: 1000px; /* Изменил ширину контейнера под 900-1199px */
-    margin-right: 30px; /* Изменил отступ справа */
-  }
-}
-
-/* Стили для контейнера с карточками doorhandles на экране шириной от 600px до 899px */
-@media (min-width: 600px) and (max-width: 899px) {
-  .doorhandles {
-    width: 700px; /* Изменил ширину контейнера под 600-899px */
-    margin-right: 10px; /* Изменил отступ справа */
-  }
-}
-
-/* Стили для контейнера с карточками doorhandles на экране шириной от 320px до 599px */
-@media (min-width: 320px) and (max-width: 599px) {
-  .doorhandles {
-    width: 300px; /* Изменил ширину контейнера под 320-599px */
-    margin-right: 5px; /* Изменил отступ справа */
+    width: 100%;
+    justify-content: center;
+    
   }
 }
 

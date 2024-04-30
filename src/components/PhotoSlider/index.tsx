@@ -10,38 +10,6 @@ import styles from "./slider.module.css";
 
 interface PhotoSliderProps {}
 
-function NextArrow(props: React.HTMLProps<HTMLDivElement>) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-      
-        background: "blue",
-        borderRadius: "50%",
-      }}
-      onClick={onClick}
-    />
-  );
-}
-
-function PrevArrow(props: React.HTMLProps<HTMLDivElement>) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        
-        background: "green",
-        borderRadius: "50%",
-      }}
-      onClick={onClick}
-    />
-  );
-}
-
 const PhotoSlider: React.FC<PhotoSliderProps> = () => {
   const settings = {
     dots: true,
@@ -50,8 +18,6 @@ const PhotoSlider: React.FC<PhotoSliderProps> = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
   };
 
   const photos = [photo1, photo2, photo3, photo4];

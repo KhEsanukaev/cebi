@@ -23,11 +23,11 @@ function App() {
       <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery}/>
         <Routes>
           <Route path="/" element={
-            <>
+            <div className='main-container'>
               <Categories />
               <Doorhandles searchQuery={searchQuery}/>
               <Image />
-            </>
+            </div>
           }/>
        
           <Route path="/category/:id" element={

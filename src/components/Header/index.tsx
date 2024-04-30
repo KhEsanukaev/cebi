@@ -24,7 +24,7 @@ const Header: React.FC<HeaderProps> = ({ searchQuery, setSearchQuery }) => {
   return (
     <header className={styles.head}>
       <div className={styles.container}>
-        <div>
+        <div className={styles.cebilogo}>
           <Link to="/">
             <img src={cebilogo} alt="Логотип" width={70} height={70} />
           </Link>

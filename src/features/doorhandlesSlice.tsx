@@ -7,7 +7,7 @@ const initialState = {
 
 export const fetchDoorhandles: any = createAsyncThunk("fetch/Doorhandles", async (_, thunkAPI) => {
   try {
-    const res = await fetch("http://app.cebisanoy.ru/doorhandle", {
+    const res = await fetch("https://app.cebisanoy.ru/doorhandle", {
       method: "GET",
     });
    console.log('GET');
