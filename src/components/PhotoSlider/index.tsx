@@ -1,7 +1,5 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import photo1 from "../../img/photo1.jpg";
 import photo2 from "../../img/photo2.jpg";
 import photo3 from "../../img/photo3.jpg";
@@ -17,6 +15,9 @@ const PhotoSlider: React.FC<PhotoSliderProps> = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,  
+    autoplaySpeed: 3000,
     
   };
 
@@ -40,3 +41,4 @@ const PhotoSlider: React.FC<PhotoSliderProps> = () => {
 };
 
 export default PhotoSlider;
+
