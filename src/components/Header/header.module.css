@@ -140,7 +140,7 @@
   }
   .container {
     padding: 10px; /* Примерное настроенное значение для меньших экранов */
-    width: 388px;
+    width: 375px;
     /* display: flex; */
     justify-content: space-around;
     
