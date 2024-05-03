@@ -41,7 +41,7 @@
   
   @media screen and (max-width: 480px) {
     .image_last {
-      max-width: 26%; 
+      max-width: 100%; 
       display: flex;
       justify-content: flex-start;
     }

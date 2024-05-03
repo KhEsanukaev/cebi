@@ -2,10 +2,10 @@
 .doorhandles {
   display: flex;
   flex-wrap: wrap;
-  gap: 1px;
+  gap: 10px;
   background-color: #eeeeeeb3;
   padding-left: 1px;
-  padding-top: 1px;
+  padding-top: 10px;
   padding-bottom: 1px;
   margin-top: 10px;
   margin-right: 10px; /* Adjusted margin for smaller screens */
@@ -16,7 +16,7 @@
   .doorhandles {
     width: 100%;
     justify-content: center;
-    
+
   }
 }
 

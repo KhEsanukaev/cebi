@@ -3,16 +3,14 @@
   box-shadow: none;
   margin-bottom: 20px;
   margin-top: 15px;
-  border: none; 
-  border-bottom: 1px solid #000; 
-  outline: none; 
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
-  padding-top: 80px;
-  height: 87px;
 }
 
 .hh {
@@ -35,14 +33,14 @@
 
 .media {
   display: flex;
-  justify-content: space-evenly;
-  width: 30%;
+  justify-content: space-around;
+  width: 50%;
   margin: auto;
- 
 }
 
 .footer {
   width: 100%;
+  margin-top: 50px;
   margin-bottom: 30px;
 }
 
@@ -67,7 +65,6 @@
 
 /* Стили для планшетов */
 
-
 /* Основные стили для кнопки и текста */
 .footer .btn {
   padding: 10px 20px;
@@ -78,4 +75,13 @@
   font-size: 14px; /* Базовый размер шрифта для текстового поля */
 }
 
+@media (max-width: 480px) {
+  .container {
+    display: block;
+  }
 
+  .media img {
+    width: 30px;
+    height: 30px;
+  }
+}
