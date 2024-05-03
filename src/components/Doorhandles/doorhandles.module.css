@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   gap: 10px;
   background-color: #eeeeeeb3;
-  padding-left: 1px;
+  padding-left: 10px;
   padding-top: 10px;
   padding-bottom: 1px;
   margin-top: 10px;
@@ -16,6 +16,7 @@
   .doorhandles {
     width: 100%;
     justify-content: center;
+    padding-left: 1px;
 
   }
 }

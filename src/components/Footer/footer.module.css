@@ -24,6 +24,7 @@
   display: flex;
   justify-content: right;
   border: none;
+  border-radius: 3px;
 }
 
 .btn:hover {
@@ -69,6 +70,7 @@
 .footer .btn {
   padding: 10px 20px;
   font-size: 16px; /* Базовый размер шрифта для кнопки */
+  border-radius: 3px;
 }
 
 .footer .inp {
@@ -78,6 +80,10 @@
 @media (max-width: 480px) {
   .container {
     display: block;
+  }
+
+  .media {
+    padding-top: 10px;
   }
 
   .media img {

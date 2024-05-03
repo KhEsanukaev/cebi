@@ -2,7 +2,7 @@
   display: flex;
   width: 1440px;
   margin: auto;
-  padding-left: 0; /* Изменено значение на 0 */
+  padding-left: 0; 
   padding-top: 1%;
 }
 
@@ -93,7 +93,7 @@
 
 @media (max-width: 834px) {
   .container {
-    padding: 10px; /* Примерное настроенное значение для меньших экранов */
+    padding: 10px; 
     width: 700px;
     /* display: flex; */
     justify-content: flex-start;
@@ -107,7 +107,7 @@
   }
   
   .cont_ul {
-    /* Adjust styles for list container on smaller screens */
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,7 +140,7 @@
   }
   .container {
     padding: 10px; /* Примерное настроенное значение для меньших экранов */
-    width: 400px;
+    width: 388px;
     /* display: flex; */
     justify-content: space-around;
     
