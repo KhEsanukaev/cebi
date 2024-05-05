@@ -1,7 +1,8 @@
 .img_card {
     width: 700px;
     height: 450px;
-    margin-left: 300px;
+    margin-left: 400px;
+    margin-top: 14px;
 }
 
 .card {
@@ -57,5 +58,30 @@
 .activeButton {
     color: #fff; /* Белый текст */
     background-color: #cadb47; /* Синий фон */
+  }
+  
+
+  @media (max-width: 480px) {
+    .card {
+      padding: 10px; /* Уменьшаем отступы */
+    }
+  
+    .img_card {
+      width: 100%; /* Заставляем изображение занимать всю доступную ширину */
+      height: auto; /* Сохраняем пропорции изображения */
+    }
+  
+    .product_head {
+      flex-direction: column; /* Элементы списка в столбец */
+    }
+  
+    .head_li, .head_li2 {
+      font-size: 14px; /* Уменьшаем размер шрифта */
+      padding: 5px; /* Уменьшаем отступы */
+    }
+  
+    .data, .data2 {
+      font-size: 12px; /* Уменьшаем размер шрифта для текста */
+    }
   }
   

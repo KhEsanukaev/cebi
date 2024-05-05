@@ -12,11 +12,13 @@
 
 .sliderContainer {
     width: 100%;
+    
   }
   
   .sliderImage {
     width: 100%;
     height: auto;
+    margin-top: 4px;
   }
 
   .slick-arrow {

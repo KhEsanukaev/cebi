@@ -39,15 +39,15 @@
 }
 
 .head {
-  width: 99%;
-  border-bottom: 2px solid #ccc;
+  width: 95%;
+  border-bottom: 1px solid #ccc;
   height: 100px;
   position: fixed;
   top: 0;
   
   z-index: 1000;
   background-color: #fff;
-  margin-bottom: 100px;
+
 }
 
 .call {
