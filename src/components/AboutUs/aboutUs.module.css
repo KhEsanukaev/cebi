@@ -1,31 +1,52 @@
 .img_about {
-    margin-top: 80px;
-    text-align: start;
+  margin-top: 80px;
+  text-align: start;
 }
 .cebi {
-    margin-top: 75px;
+  margin-top: 75px;
 }
 
 .text_about {
-    width: 1000px;
-    text-align: justify;
-    margin-left: 139px;
-    margin-top: 20px;
-    margin-bottom: 100px;
+  width: 1000px;
+  text-align: justify;
+  margin-left: 139px;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 
 .empire {
-    text-align: end;
+  text-align: end;
 }
 
 .secutity {
-    text-align: start;
+  text-align: start;
 }
 
 .empiredoorplate {
-    text-align: end;
+  text-align: end;
 }
 
 .zipline {
-    text-align: start;
+  text-align: start;
+}
+
+@media (max-width: 480px) {
+  .cebi img,
+  .img_about img,
+  .empire img,
+  .secutity img,
+  .empiredoorplate img,
+  .zipline img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text_about  {
+    width: 100%;
+    text-align: justify;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    font-size: 14px;
+    margin-left: 1px;
+  }
 }
