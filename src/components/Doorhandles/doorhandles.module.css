@@ -4,19 +4,19 @@
   flex-wrap: wrap;
   gap: 10px;
   background-color: #eeeeeeb3;
-  padding-left: 10px;
+  /* padding-left: 10px; */
   padding-top: 10px;
   padding-bottom: 1px;
   margin-top: 10px;
-  margin-right: 10px; /* Adjusted margin for smaller screens */
+  /* margin-right: 10px;  */
   width: calc(100% - 20px); /* Adjusted width for smaller screens */
 }
 
-@media (min-width: 430px) {
+@media (min-width: 480px) {
   .doorhandles {
     width: 100%;
     justify-content: center;
-    padding-left: 1px;
+ 
 
   }
 }
