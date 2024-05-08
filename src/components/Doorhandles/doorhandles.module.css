@@ -12,7 +12,7 @@
   width: calc(100% - 20px); /* Adjusted width for smaller screens */
 }
 
-@media (min-width: 480px) {
+@media (max-width: 480px) {
   .doorhandles {
     width: 100%;
     justify-content: center;
