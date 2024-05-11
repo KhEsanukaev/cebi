@@ -15,23 +15,23 @@ const AboutUs: React.FC = () => {
       </div>
 
       <div className={styles.img_about}>
-        <img src={grozny} alt="" width={650} height={500} />
+        <img src={grozny} alt="" width={750} height={500} />
       </div>
 
       <div className={styles.empire}>
-        <img src={empire} alt="" width={670} height={700} />
+        <img src={empire} alt="" width={753} height={700} />
       </div>
 
       <div className={styles.secutity}>
-        <img src={security} alt="" width={650} height={470} />
+        <img src={security} alt="" width={750} height={470} />
       </div>
 
       <div className={styles.empiredoorplate}>
-        <img src={empiredoorplate} alt="" width={650} height={500} />
+        <img src={empiredoorplate} alt="" width={752} height={500} />
       </div>
 
       <div className={styles.zipline}>
-        <img src={zipline} alt="" width={660} height={760} />
+        <img src={zipline} alt="" width={750} height={760} />
       </div>
 
       <div className={styles.text_about}>
