@@ -8,8 +8,8 @@
   padding-top: 10px;
   padding-bottom: 1px;
   margin-top: 10px;
-  /* margin-right: 10px;  */
-  width: calc(100% - 20px); /* Adjusted width for smaller screens */
+  
+  width: calc(100% - 20px); 
 }
 
 @media (max-width: 480px) {

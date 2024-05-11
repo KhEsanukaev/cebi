@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import cebilogo from "../../img/cebilogo.jpg";
 import telegram from "../../img/telegtam.png";
@@ -8,6 +8,7 @@ import styles from "../Footer/footer.module.css";
 
 const Footer: React.FC = () => {
   const form = useRef<HTMLFormElement>(null);
+  const [message, setMessage] = useState(""); // Состояние для хранения сообщения
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,11 +28,10 @@ const Footer: React.FC = () => {
       .then(
         (result) => {
           console.log(result.text);
-          // Here you can add a success notification
+          setMessage(""); // Очистка поля после успешной отправки
         },
         (error) => {
           console.log(error.text);
-          // Here you can handle the sending error
         }
       );
   };
@@ -56,6 +56,8 @@ const Footer: React.FC = () => {
             name="message"
             placeholder="Сообщение"
             required
+            value={message} // Привязка состояния к полю
+            onChange={(e) => setMessage(e.target.value)} // Обновление состояния при изменении поля
           ></textarea>
           <button type="submit" className={styles.btn}>
             Отправить
