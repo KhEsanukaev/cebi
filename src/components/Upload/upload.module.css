@@ -1,30 +1,76 @@
 .upload {
-    text-align: left;
+  text-align: left;
 
-    margin-top: 56px;
+  margin-top: 56px;
 }
 
 .h2_catalog {
-    font-size: 36px;
-    font-weight: 400;
+  font-size: 36px;
+  font-weight: 400;
 }
 
 .link a {
-    color: black;
-    font-weight: 300;
+  color: black;
+  font-weight: 300;
 }
 
 .link a:hover {
-    color: #acce11; 
-  }
+  color: #acce11;
+}
 
 .link2 a {
-    color: black;
-    font-weight: 300;
+  color: black;
+  font-weight: 300;
 }
 
 .link2 a:hover {
-    color: #acce11; 
-  }
+  color: #acce11;
+}
 
+.workUse {
+ 
+  margin-top: 35px;
+
+}
+
+.catalog {
+  display: flex;
+  margin-top: 66px;
+}
+
+.catalog2 {
+    height: 420px;
+    margin-top: 35px;
+    background-color: #80808066;
+}
+
+/* В вашем файле upload.module.css добавьте следующие медиа-запросы */
+
+@media (max-width: 480px) {
+    .upload {
+      padding: 10px; /* Уменьшаем отступы */
+    }
+  
+    .catalog {
+      flex-direction: column; /* Элементы теперь будут располагаться вертикально */
+    }
+  
+    .catalog2 {
+      align-items: center; /* Центрируем содержимое */
+    
+    }
+  
+    .h2_catalog {
+      font-size: 18px; /* Уменьшаем размер шрифта заголовка */
+    }
+  
+    .link a, .link2 a {
+      font-size: 16px; /* Уменьшаем размер шрифта ссылок */
+    }
+  
+    .workUse img {
+      width: 100%; /* Изображение теперь будет занимать всю доступную ширину */
+      height: auto; /* Высота изображения будет автоматически подстраиваться */
+    }
+  }
   
