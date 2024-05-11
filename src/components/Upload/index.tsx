@@ -2,7 +2,7 @@ import React from "react";
 import cebilogo from "../../img/cebilogo.jpg";
 import styles from "../Upload/upload.module.css";
 import Contacts from "../Contacts";
-import workUs from "../../img/workUs.jpg";
+import workUs2 from "../../img/workUs2.png";
 
 const Upload: React.FC = () => {
   return (
@@ -32,7 +32,7 @@ const Upload: React.FC = () => {
         </div>
 
         <div className={styles.workUse}>
-          <img src={workUs} alt="" width={1082} height={420}/>
+          <img src={workUs2} alt="" width={1082} height={450}/>
         </div>
       </div>
       <Contacts showMap={false} />
