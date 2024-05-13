@@ -12,7 +12,7 @@ const Upload: React.FC = () => {
           <div>
             <h2 className={styles.h2_catalog}>Каталог</h2>
           </div>
-          <div>
+          <div className={styles.logo}>
             <img src={cebilogo} alt="Логотип" width={200} height={200} />
           </div>
           <div className={styles.link}>
