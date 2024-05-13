@@ -23,6 +23,7 @@
 }
 
 .link {
+  display: flex;
   width: 90%;
   margin: auto;
 }
@@ -57,9 +58,13 @@
 }
 
 .logo {
-    padding-left: 21px;
+  padding-left: 21px;
 }
 
+.img_saved {
+  margin-top: 8px;
+  margin-left: 15px;
+}
 /* В вашем файле upload.module.css добавьте следующие медиа-запросы */
 
 @media (max-width: 480px) {

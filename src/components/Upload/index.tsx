@@ -3,6 +3,7 @@ import cebilogo from "../../img/cebilogo.jpg";
 import styles from "../Upload/upload.module.css";
 import Contacts from "../Contacts";
 import workUs2 from "../../img/workUs2.png";
+import saved from "../../img/saved.png";
 
 const Upload: React.FC = () => {
   return (
@@ -21,6 +22,7 @@ const Upload: React.FC = () => {
                 Скачать каталог дверных ручек
               </a>
             </h2>
+            <img className={styles.img_saved} src={saved} alt="" width={40} height={45} />
           </div>
           <div className={styles.link2}>
             <h2>
@@ -32,7 +34,7 @@ const Upload: React.FC = () => {
         </div>
 
         <div className={styles.workUse}>
-          <img src={workUs2} alt="" width={1082} height={450}/>
+          <img src={workUs2} alt="" width={1082} height={450} />
         </div>
       </div>
       <Contacts showMap={false} />
