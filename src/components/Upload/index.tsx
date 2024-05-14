@@ -34,7 +34,7 @@ const Upload: React.FC = () => {
         </div>
 
         <div className={styles.workUse}>
-          <img src={workUs2} alt="" width={1082} height={450} />
+          <img src={workUs2} alt="" width={"100%"}  />
         </div>
       </div>
       <Contacts showMap={false} />
