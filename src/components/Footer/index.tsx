@@ -88,7 +88,7 @@ const Footer: React.FC = () => {
           </a>
           <a
             target="_blank"
-            href="https://wa.me/89899309981"
+            href="https://wa.me/+79899309981"
             rel="noopener noreferrer"
           >
             <img
